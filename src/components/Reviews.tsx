@@ -5,17 +5,17 @@ export default function Reviews() {
   return (
     <section
       id="avis"
-      className="py-24 lg:py-32 bg-cream-50 relative overflow-hidden"
+      className="py-24 lg:py-32 bg-cream-50 dark:bg-noir-600 relative overflow-hidden transition-colors duration-500"
     >
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-gold-50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-96 h-96 bg-gold-50 dark:bg-gold-900/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 opacity-0-init animate-fade-up">
-          <p className="text-gold-600 font-sans text-sm uppercase tracking-[0.3em] mb-3 font-medium">
+          <p className="text-gold-600 dark:text-gold-400 font-sans text-sm uppercase tracking-[0.3em] mb-3 font-medium">
             Témoignages
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif font-semibold text-stone-800 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-serif font-semibold text-stone-800 dark:text-cream-50 leading-tight">
             Ce que disent nos <span className="text-gold-gradient">clientes</span>
           </h2>
           <div className="gold-divider w-32 mx-auto mt-6" />
@@ -25,7 +25,7 @@ export default function Reviews() {
                 <Star key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
               ))}
             </div>
-            <span className="text-stone-500 text-lg">
+            <span className="text-stone-500 dark:text-stone-400 text-lg">
               4.9/5 sur la base de 200+ avis
             </span>
           </div>
@@ -36,11 +36,11 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <article
               key={review.id}
-              className="bg-cream-100 rounded-3xl p-7 border border-gold-100 hover-lift hover:shadow-gold relative opacity-0-init animate-fade-up"
+              className="bg-cream-100 dark:bg-noir-400 rounded-3xl p-7 border border-gold-100 dark:border-gold-900/40 hover-lift hover:shadow-gold relative opacity-0-init animate-fade-up"
               style={{ animationDelay: `${index * 80}ms` }}
             >
               {/* Quote icon */}
-              <div className="absolute top-5 right-5 text-gold-100">
+              <div className="absolute top-5 right-5 text-gold-100 dark:text-gold-900/60">
                 <Quote className="w-10 h-10" />
               </div>
 
@@ -52,22 +52,22 @@ export default function Reviews() {
               </div>
 
               {/* Comment */}
-              <p className="text-stone-600 leading-relaxed mb-6 relative z-10">
+              <p className="text-stone-600 dark:text-stone-300 leading-relaxed mb-6 relative z-10">
                 « {review.comment} »
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gold-100">
+              <div className="flex items-center gap-3 pt-4 border-t border-gold-100 dark:border-gold-900/40">
                 <img
                   src={review.avatar}
                   alt={review.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-gold-200"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-gold-200 dark:border-gold-700"
                 />
                 <div>
-                  <p className="font-serif font-semibold text-stone-800">
+                  <p className="font-serif font-semibold text-stone-800 dark:text-cream-50">
                     {review.name}
                   </p>
-                  <p className="text-xs text-stone-400">
+                  <p className="text-xs text-stone-400 dark:text-stone-500">
                     {review.service} · {review.date}
                   </p>
                 </div>

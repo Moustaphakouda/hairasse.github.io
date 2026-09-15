@@ -25,6 +25,10 @@ export interface GalleryItem {
   category: string;
   image: string;
   span?: boolean;
+  description: string;
+  duration: string;
+  price: string;
+  tags: string[];
 }
 
 export const services: Service[] = [
@@ -188,18 +192,30 @@ export const galleryItems: GalleryItem[] = [
     category: 'Couleur',
     image: 'https://images.pexels.com/photos/28833615/pexels-photo-28833615.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: true,
+    description: 'Un balayage effet soleil qui apporte luminosité et profondeur naturelle. Des mèches fines et fondues pour un rendu ensoleillé toute l\'année, sans démarcation. Idéal pour illuminer le visage et apporter du relief aux cheveux longs.',
+    duration: '2h30',
+    price: 'À partir de 85€',
+    tags: ['Balayage', 'Effet soleil', 'Sans démarcation'],
   },
   {
     id: 'g2',
     title: 'Chignon Élégant',
     category: 'Coiffure',
     image: 'https://images.pexels.com/photos/19163430/pexels-photo-19163430.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Un chignon raffiné et maîtrisé pour vos événements et cérémonies. Coiffage minutieux, fixage longue durée et finitions impeccables pour une tenue parfaite toute la soirée.',
+    duration: '1h15',
+    price: 'À partir de 60€',
+    tags: ['Chignon', 'Cérémonie', 'Longue tenue'],
   },
   {
     id: 'g3',
     title: 'Tresses Sophistiquées',
     category: 'Coiffure',
     image: 'https://images.pexels.com/photos/2399536/pexels-photo-2399536.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Des tresses africaines sophistiquées, fines et précises, réalisées avec soin. Un style protecteur et élégant qui sublime la texture naturelle de vos cheveux tout en offrant une tenue durable.',
+    duration: '3h',
+    price: 'À partir de 90€',
+    tags: ['Tresses', 'Style protecteur', 'Cheveux naturels'],
   },
   {
     id: 'g4',
@@ -207,30 +223,50 @@ export const galleryItems: GalleryItem[] = [
     category: 'Mariage',
     image: 'https://images.pexels.com/photos/15507425/pexels-photo-15507425.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: true,
+    description: 'Une coiffure de mariage d\'exception, du premier essai à la réalisation le jour J. Chignons, demi-coiffages, voiles et accessoires — tout est pensé pour que vous soyez la plus belle de votre journée.',
+    duration: '2h',
+    price: 'À partir de 150€',
+    tags: ['Mariage', 'Essai inclus', 'Jour J'],
   },
   {
     id: 'g5',
     title: 'Coloration Éclat',
     category: 'Couleur',
     image: 'https://images.pexels.com/photos/3993323/pexels-photo-3993323.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Une coloration uniforme qui illumine et intensifie votre chevelure. Produits doux et respectueux du cheveu, couverture parfaite des cheveux blancs et éclat longue durée.',
+    duration: '2h',
+    price: 'À partir de 65€',
+    tags: ['Coloration', 'Éclat', 'Couvre cheveux blancs'],
   },
   {
     id: 'g6',
     title: 'Updo Cérémonie',
     category: 'Mariage',
     image: 'https://images.pexels.com/photos/39142946/pexels-photo-39142946.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Un updo structuré et romantique pour vos cérémonies et galas. Volume maîtrisé, mèches lâchées stratégiquement et finitions spray longue durée pour une élégance intemporelle.',
+    duration: '1h30',
+    price: 'À partir de 70€',
+    tags: ['Updo', 'Gala', 'Volume'],
   },
   {
     id: 'g7',
     title: 'Tresses Florales',
     category: 'Mariage',
     image: 'https://images.pexels.com/photos/11652342/pexels-photo-11652342.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Des tresses florales romantiques ornées de fleurs fraîches ou artificielles. Parfait pour un mariage bohème ou une séance photo en plein air. Un look poétique et naturel.',
+    duration: '2h',
+    price: 'À partir de 95€',
+    tags: ['Tresses', 'Fleurs', 'Bohème'],
   },
   {
     id: 'g8',
     title: 'Élégance Naturelle',
     category: 'Coiffure',
     image: 'https://images.pexels.com/photos/15957842/pexels-photo-15957842.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Un brushing et mise en beauté qui valorise la texture naturelle de vos cheveux. Volume, brillance et mouvement pour un résultat effortless chic, sans effet figé.',
+    duration: '45min',
+    price: 'À partir de 35€',
+    tags: ['Brushing', 'Naturel', 'Volume'],
   },
 ];
 

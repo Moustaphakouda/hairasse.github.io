@@ -10,7 +10,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 
 function App() {
   return (
-    <div className="min-h-screen bg-cream-50 overflow-x-hidden">
+    <div className="min-h-screen bg-cream-50 dark:bg-noir-600 overflow-x-hidden transition-colors duration-500">
       <ScrollProgress />
       <Navbar />
       <main>

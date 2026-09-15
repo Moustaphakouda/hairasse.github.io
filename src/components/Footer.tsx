@@ -17,7 +17,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-stone-900 text-stone-300 pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-stone-900 dark:bg-noir-300 text-stone-300 pt-16 pb-8 relative overflow-hidden transition-colors duration-500">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold-900/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -45,14 +45,14 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-stone-800 hover:bg-gold-600 flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-stone-800 dark:bg-noir-100 hover:bg-gold-600 flex items-center justify-center transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-stone-800 hover:bg-gold-600 flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-stone-800 dark:bg-noir-100 hover:bg-gold-600 flex items-center justify-center transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -113,7 +113,7 @@ export default function Footer() {
                 <span>{salonInfo.email}</span>
               </li>
             </ul>
-            <div className="mt-5 pt-5 border-t border-stone-800">
+            <div className="mt-5 pt-5 border-t border-stone-800 dark:border-noir-100">
               <ul className="space-y-2">
                 {salonInfo.hours.map((h) => (
                   <li
@@ -132,7 +132,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-stone-800 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mt-12 pt-6 border-t border-stone-800 dark:border-noir-100 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-stone-500">
             © 2026 Élégance Or. Tous droits réservés.
           </p>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const navLinks = [
   { label: 'Accueil', href: '#accueil' },
@@ -47,14 +48,10 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex flex-col leading-none text-left">
-            <span
-              className={`font-serif text-xl font-semibold tracking-wide transition-colors duration-500 ${
-                scrolled ? 'text-stone-800' : 'text-stone-800'
-              }`}
-            >
+            <span className="font-serif text-xl font-semibold tracking-wide text-stone-800 dark:text-cream-50 transition-colors duration-500">
               Élégance Or
             </span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-gold-600 font-sans font-medium">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-gold-600 dark:text-gold-400 font-sans font-medium">
               Coiffure Féminine
             </span>
           </div>
@@ -66,9 +63,7 @@ export default function Navbar() {
             <li key={link.href}>
               <button
                 onClick={() => handleNavClick(link.href)}
-                className={`relative text-sm font-medium tracking-wide transition-colors duration-300 group ${
-                  scrolled ? 'text-stone-600 hover:text-gold-600' : 'text-stone-700 hover:text-gold-600'
-                }`}
+                className="relative text-sm font-medium tracking-wide text-stone-600 dark:text-stone-300 hover:text-gold-600 dark:hover:text-gold-400 transition-colors duration-300 group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold-gradient transition-all duration-300 group-hover:w-full" />
@@ -77,11 +72,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA + Theme toggle */}
         <div className="hidden lg:flex items-center gap-4">
+          <ThemeToggle />
           <a
             href="tel:+33142658990"
-            className="flex items-center gap-2 text-sm text-stone-600 hover:text-gold-600 transition-colors"
+            className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-300 hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
           >
             <Phone className="w-4 h-4" />
             <span className="font-medium">01 42 65 89 90</span>
@@ -95,13 +91,16 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-full bg-cream-100 text-stone-700 hover:bg-gold-100 transition-colors"
-          aria-label="Menu"
-        >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-cream-100 dark:bg-noir-300 text-stone-700 dark:text-stone-200 hover:bg-gold-100 dark:hover:bg-gold-900/40 transition-colors"
+            aria-label="Menu"
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -110,13 +109,13 @@ export default function Navbar() {
           mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 py-6 bg-cream-50 shadow-gold-lg">
+        <div className="px-6 py-6 bg-cream-50 dark:bg-noir-400 shadow-gold-lg">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <button
                   onClick={() => handleNavClick(link.href)}
-                  className="text-stone-700 hover:text-gold-600 font-medium text-lg w-full text-left transition-colors"
+                  className="text-stone-700 dark:text-stone-200 hover:text-gold-600 dark:hover:text-gold-400 font-medium text-lg w-full text-left transition-colors"
                 >
                   {link.label}
                 </button>
