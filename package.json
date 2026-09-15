@@ -1,7 +1,7 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "homepage": "https://Moustaphakouda.github.io/hairasse.github.io",
+  "homepage": "https://moustaphakouda.github.io/hairasse.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
